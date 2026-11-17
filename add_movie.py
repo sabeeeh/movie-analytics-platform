@@ -1,10 +1,14 @@
 import argparse
-import psycopg
+import os
 
+import psycopg
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DB_NAME = "malayalam_movie_analysis"
 DB_USER = "postgres"
-DB_PASSWORD = "lolan123"
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
